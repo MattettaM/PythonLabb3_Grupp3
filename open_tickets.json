@@ -1,0 +1,56 @@
+{
+    "1004": {
+        "Kundens namn": "David Eriksson",
+        "Kategori": "Tekniskt fel",
+        "Prioritet": 2,
+        "Status": "Pågår"
+    },
+    "1007": {
+        "Kundens namn": "Greta Lindberg",
+        "Kategori": "Fakturering",
+        "Prioritet": 2,
+        "Status": "Öppet"
+    },
+    "1013": {
+        "Kundens namn": "Maja Ek",
+        "Kategori": "Tekniskt fel",
+        "Prioritet": 2,
+        "Status": "Öppet"
+    },
+    "1002": {
+        "Kundens namn": "Bilal Hassan",
+        "Kategori": "Fakturering",
+        "Prioritet": 1,
+        "Status": "Öppet"
+    },
+    "1005": {
+        "Kundens namn": "Elin Berg",
+        "Kategori": "Konto",
+        "Prioritet": 1,
+        "Status": "Öppet"
+    },
+    "1008": {
+        "Kundens namn": "Hugo Svensson",
+        "Kategori": "Tekniskt fel",
+        "Prioritet": 1,
+        "Status": "Pågår"
+    },
+    "1011": {
+        "Kundens namn": "Klara Holm",
+        "Kategori": "Inloggning",
+        "Prioritet": 1,
+        "Status": "Pågår"
+    },
+    "1014": {
+        "Kundens namn": "Nils Persson",
+        "Kategori": "Behörighet",
+        "Prioritet": 1,
+        "Status": "Pågår"
+    },
+    "1010": {
+        "Kundens namn": "Jamal Osman",
+        "Kategori": "Konto",
+        "Prioritet": 0,
+        "Status": "Öppet"
+    }
+}

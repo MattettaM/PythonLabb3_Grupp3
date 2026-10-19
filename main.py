@@ -1,4 +1,5 @@
 import csv
+import json
 from dataclasses import dataclass
 
 
@@ -10,16 +11,26 @@ class Support_Ticket:
     priority: int
     status: str
 
+    def convert_to_dictionary(self):
+        return {
+                "Kundens namn": self.customer_name,
+                "Kategori": self.category,
+                "Prioritet": self.priority,
+                "Status": self.status
+                }
+
     def close_ticket(self):
         self.status = "Stängt"
 
     def update_status(self, new_status: str):
         self.status = new_status
 
-def print_open_tickets(tickets: list[Support_Ticket]):
+def get_open_tickets(tickets: list[Support_Ticket]):
+    open_tickets = []
     for ticket in tickets:
         if ticket.status != "Stängt":
-            print(ticket)
+            open_tickets.append(ticket)
+    return open_tickets
 
 def priority_string_to_number(priority_string):
     if priority_string == "Hög":
@@ -28,6 +39,10 @@ def priority_string_to_number(priority_string):
         return 1
     else: # priortiy == "Låg"
         return 0
+
+def print_ticket_with_status(ticket: Support_Ticket, status: str):
+    if ticket.status == status:
+        print(ticket)
 
 def sort_tickets_by_priority(tickets: list[Support_Ticket], high_to_low = True):
     return sorted(tickets, key=lambda ticket: ticket.priority, reverse= high_to_low)
@@ -45,4 +60,13 @@ with open("supportarenden.csv", encoding="utf-8") as data:
 
 support_tickets[0].close_ticket()
 support_tickets[1].update_status("Öppet")
-print_open_tickets(sort_tickets_by_priority(support_tickets))
+sorted_tickets = sort_tickets_by_priority(support_tickets)
+open_tickets: list[Support_Ticket] = get_open_tickets(sorted_tickets)
+
+open_tickets_dictionary = {}
+for ticket in open_tickets:
+    print(ticket)
+    open_tickets_dictionary[str(ticket.errand_number)] = ticket.convert_to_dictionary()
+
+with open("open_tickets.json", "w", encoding="utf-8") as output:
+    json.dump(open_tickets_dictionary, output, indent=4, ensure_ascii=False)
