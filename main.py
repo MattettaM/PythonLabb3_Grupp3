@@ -11,6 +11,11 @@ class Support_Ticket:
     priority: int
     status: str
 
+    def __post_init__(self):
+        valid_statuses = ["Öppet", "Pågår", "Stängt"]
+        if self.status not in valid_statuses:
+            raise ValueError("Ogiltigt status")
+
     def convert_to_dictionary(self):
         return {
                 "Kundens namn": self.customer_name,
