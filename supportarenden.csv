@@ -1,0 +1,16 @@
+id,kund,kategori,prioritet,status
+1001,Anna Andersson,Inloggning,Hög,Öppet
+1002,Bilal Hassan,Fakturering,Medel,Pågår
+1003,Carina Nilsson,Behörighet,Låg,Stängt
+1004,David Eriksson,Tekniskt fel,Hög,Pågår
+1005,Elin Berg,Konto,Medel,Öppet
+1006,Farid Ali,Inloggning,Låg,Stängt
+1007,Greta Lindberg,Fakturering,Hög,Öppet
+1008,Hugo Svensson,Tekniskt fel,Medel,Pågår
+1009,Ida Karlsson,Behörighet,Hög,Stängt
+1010,Jamal Osman,Konto,Låg,Öppet
+1011,Klara Holm,Inloggning,Medel,Pågår
+1012,Leo Martinsson,Fakturering,Låg,Stängt
+1013,Maja Ek,Tekniskt fel,Hög,Öppet
+1014,Nils Persson,Behörighet,Medel,Pågår
+1015,Olivia Sjöberg,Konto,Hög,Stängt
